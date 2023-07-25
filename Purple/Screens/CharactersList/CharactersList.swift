@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CharactersList.swift
 //  Purple
 //
 //  Created by Work on 25.07.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CharactersList: View {
     @StateObject var viewModel = CharactersListViewModel()
     
     var body: some View {
@@ -40,6 +40,6 @@ struct ContentView: View {
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CharactersList()
     }
 }
