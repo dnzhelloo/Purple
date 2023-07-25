@@ -11,6 +11,10 @@
 		2230AF272A703026005EC8FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230AF262A703026005EC8FB /* ContentView.swift */; };
 		2230AF292A703027005EC8FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2230AF282A703027005EC8FB /* Assets.xcassets */; };
 		2230AF2C2A703027005EC8FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2230AF2B2A703027005EC8FB /* Preview Assets.xcassets */; };
+		2230AF342A7030CB005EC8FB /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 2230AF332A7030CB005EC8FB /* Apollo */; };
+		2230AF362A7030CB005EC8FB /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 2230AF352A7030CB005EC8FB /* ApolloWebSocket */; };
+		2230AF3C2A703836005EC8FB /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 2230AF3A2A703836005EC8FB /* schema.graphqls */; };
+		2230AF452A7038AD005EC8FB /* RickAndMortyAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 2230AF442A7038AD005EC8FB /* RickAndMortyAPI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,9 @@
 		2230AF262A703026005EC8FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2230AF282A703027005EC8FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2230AF2B2A703027005EC8FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2230AF3A2A703836005EC8FB /* schema.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = schema.graphqls; sourceTree = "<group>"; };
+		2230AF402A70385B005EC8FB /* CharacterList.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = CharacterList.graphql; sourceTree = "<group>"; };
+		2230AF422A70389D005EC8FB /* RickAndMortyAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RickAndMortyAPI; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2230AF342A7030CB005EC8FB /* Apollo in Frameworks */,
+				2230AF452A7038AD005EC8FB /* RickAndMortyAPI in Frameworks */,
+				2230AF362A7030CB005EC8FB /* ApolloWebSocket in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,8 +45,10 @@
 		2230AF182A703026005EC8FB = {
 			isa = PBXGroup;
 			children = (
+				2230AF412A70389D005EC8FB /* Packages */,
 				2230AF232A703026005EC8FB /* Purple */,
 				2230AF222A703026005EC8FB /* Products */,
+				2230AF432A7038AD005EC8FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +63,7 @@
 		2230AF232A703026005EC8FB /* Purple */ = {
 			isa = PBXGroup;
 			children = (
+				2230AF392A703836005EC8FB /* graphql */,
 				2230AF242A703026005EC8FB /* PurpleApp.swift */,
 				2230AF262A703026005EC8FB /* ContentView.swift */,
 				2230AF282A703027005EC8FB /* Assets.xcassets */,
@@ -65,6 +78,30 @@
 				2230AF2B2A703027005EC8FB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2230AF392A703836005EC8FB /* graphql */ = {
+			isa = PBXGroup;
+			children = (
+				2230AF3A2A703836005EC8FB /* schema.graphqls */,
+				2230AF402A70385B005EC8FB /* CharacterList.graphql */,
+			);
+			path = graphql;
+			sourceTree = SOURCE_ROOT;
+		};
+		2230AF412A70389D005EC8FB /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				2230AF422A70389D005EC8FB /* RickAndMortyAPI */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		2230AF432A7038AD005EC8FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +120,11 @@
 			dependencies = (
 			);
 			name = Purple;
+			packageProductDependencies = (
+				2230AF332A7030CB005EC8FB /* Apollo */,
+				2230AF352A7030CB005EC8FB /* ApolloWebSocket */,
+				2230AF442A7038AD005EC8FB /* RickAndMortyAPI */,
+			);
 			productName = Purple;
 			productReference = 2230AF212A703026005EC8FB /* Purple.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +153,9 @@
 				Base,
 			);
 			mainGroup = 2230AF182A703026005EC8FB;
+			packageReferences = (
+				2230AF322A7030CB005EC8FB /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = 2230AF222A703026005EC8FB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2230AF2C2A703027005EC8FB /* Preview Assets.xcassets in Resources */,
+				2230AF3C2A703836005EC8FB /* schema.graphqls in Resources */,
 				2230AF292A703027005EC8FB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,8 +319,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,8 +348,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +385,34 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2230AF322A7030CB005EC8FB /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2230AF332A7030CB005EC8FB /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2230AF322A7030CB005EC8FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		2230AF352A7030CB005EC8FB /* ApolloWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2230AF322A7030CB005EC8FB /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloWebSocket;
+		};
+		2230AF442A7038AD005EC8FB /* RickAndMortyAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RickAndMortyAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2230AF192A703026005EC8FB /* Project object */;
 }
