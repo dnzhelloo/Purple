@@ -22,7 +22,13 @@ struct CharactersList: View {
                         ScrollView(.horizontal,showsIndicators: false){
                             LazyHStack{
                                 ForEach(viewModel.firstFiveCharacter) { character in
-                                    CharacterCardView(character: character)
+                                    NavigationLink {
+                                        CharacterDetail(characterID: character.id)
+                                    } label: {
+                                        CharacterCardView(character: character)
+                                    }
+
+                                   
                                 }
                             }
                         }
@@ -66,39 +72,5 @@ struct CharactersList: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         CharactersList()
-    }
-}
-
-
-
-struct CharacterRowCell: View {
-    let character: Character
-    
-    var body: some View {
-        HStack(spacing: 16) {
-            CharactersImage(urlString: character.image)
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 50, height: 50)
-                .cornerRadius(12)
-            
-            VStack(alignment: .leading, spacing: 4) {
-                Text(character.name)
-                    .foregroundColor(Color(uiColor: .label))
-                
-                Text(character.status)
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-            }
-            
-            Spacer()
-            
-            Image(systemName: "chevron.right")
-                .font(.headline)
-                .foregroundColor(Color(uiColor: .label))
-        }
-        .padding(8)
-        .background(Color(uiColor: .systemGroupedBackground))
-        .cornerRadius(12)
-        .shadow(color: .gray.opacity(0.4), radius: 4, x: 0, y: 2)
     }
 }

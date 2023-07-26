@@ -28,6 +28,7 @@
 		2230AF662A7105AD005EC8FB /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230AF652A7105AD005EC8FB /* CharacterDetailViewModel.swift */; };
 		226A8CDC2A713AA200A6A11D /* tetetete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226A8CDB2A713AA200A6A11D /* tetetete.swift */; };
 		226A8CDF2A715C6400A6A11D /* CharacterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226A8CDE2A715C6400A6A11D /* CharacterCardView.swift */; };
+		229F73342A71BDA600ED722F /* CharacterRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229F73332A71BDA600ED722F /* CharacterRowCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		225604FC2A71152900A5AC1D /* RickAndMortyAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RickAndMortyAPI; sourceTree = "<group>"; };
 		226A8CDB2A713AA200A6A11D /* tetetete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tetetete.swift; sourceTree = "<group>"; };
 		226A8CDE2A715C6400A6A11D /* CharacterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCardView.swift; sourceTree = "<group>"; };
+		229F73332A71BDA600ED722F /* CharacterRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRowCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				226A8CDE2A715C6400A6A11D /* CharacterCardView.swift */,
+				229F73332A71BDA600ED722F /* CharacterRowCell.swift */,
 			);
 			path = CharacterList;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				2230AF562A707577005EC8FB /* Color+Ext.swift in Sources */,
 				2230AF522A706597005EC8FB /* CharactersImage.swift in Sources */,
 				226A8CDC2A713AA200A6A11D /* tetetete.swift in Sources */,
+				229F73342A71BDA600ED722F /* CharacterRowCell.swift in Sources */,
 				226A8CDF2A715C6400A6A11D /* CharacterCardView.swift in Sources */,
 				2230AF582A707815005EC8FB /* CharactersListViewModel.swift in Sources */,
 				2230AF4A2A703B94005EC8FB /* NetworkError.swift in Sources */,
