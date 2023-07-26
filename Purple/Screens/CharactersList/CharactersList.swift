@@ -12,32 +12,37 @@ struct CharactersList: View {
     
     var body: some View {
         ZStack{
-            ScrollView(.horizontal){
-                HStack{
-                    ForEach(viewModel.character) { data in
-                        CharactersImage(urlString: data.image)
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 120,height: 50)
-                            .cornerRadius(12)
+            ScrollView(){
+                LazyVStack(spacing: 10) { // Veya LazyHStack kullanın
+                    ForEach(viewModel.characters, id: \.id) { character in
+                        HStack{
+                            CharactersImage(urlString: character.image)
+                                .aspectRatio(contentMode: .fit)
+                                .cornerRadius(12)
+                                .frame(width: 120,height: 50)
+                            Text(character.name)
+                        }.onAppear{
+                            if character.id == viewModel.characters.last?.id{
+                                viewModel.loadCharacters()
+                            }
+                        }
+                        
+                        
                     }
-                }.onAppear{
-                    viewModel.loadCharacters()
                 }
             }
             
-            //loading
+            //Loading
             if viewModel.isLoading{
                 LoadingView()
-                
             }
-            
         }
-        Text("you can't hurt me no more ")
-       
+        .onAppear{
+            viewModel.loadCharacters()
+        }
     }
-    
-
 }
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         CharactersList()
