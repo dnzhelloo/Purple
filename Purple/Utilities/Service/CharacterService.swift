@@ -34,6 +34,23 @@ class CharacterService {
             }
         }
     }
+    
+    func fetchCharacterDetail(characterID: RickAndMortyAPI.ID, completion: @escaping (Result<CharacterDetailModel?, Error>) -> Void) {
+        NetworkManager.shared.executeQuery(query: CharacterDetailQuery(characterId: characterID)) { result in
+            switch result {
+                case .success(let data):
+                    if let characterData = data?.character {
+                        let characterDetailModel = CharacterDetailModel(characterData: characterData)
+                        completion(.success(characterDetailModel))
+                    } else {
+                        completion(.failure(NetworkError.noData))
+                    }
+                case .failure(let error):
+                    completion(.failure(error))
+            }
+        }
+    }
+
 }
 
 
