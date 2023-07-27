@@ -26,6 +26,8 @@
 		2230AF582A707815005EC8FB /* CharactersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230AF572A707815005EC8FB /* CharactersListViewModel.swift */; };
 		2230AF632A71045E005EC8FB /* CharacterDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230AF622A71045E005EC8FB /* CharacterDetail.swift */; };
 		2230AF662A7105AD005EC8FB /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230AF652A7105AD005EC8FB /* CharacterDetailViewModel.swift */; };
+		226566E22A72440D00EFFC8D /* InfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226566E12A72440D00EFFC8D /* InfoRow.swift */; };
+		226566E42A72445A00EFFC8D /* EpisodeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226566E32A72445A00EFFC8D /* EpisodeRow.swift */; };
 		226A8CDC2A713AA200A6A11D /* tetetete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226A8CDB2A713AA200A6A11D /* tetetete.swift */; };
 		226A8CDF2A715C6400A6A11D /* CharacterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226A8CDE2A715C6400A6A11D /* CharacterCardView.swift */; };
 		229F73342A71BDA600ED722F /* CharacterRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229F73332A71BDA600ED722F /* CharacterRowCell.swift */; };
@@ -52,6 +54,8 @@
 		2230AF652A7105AD005EC8FB /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
 		2230AF692A71094A005EC8FB /* CharacterDetail.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = CharacterDetail.graphql; sourceTree = "<group>"; };
 		225604FC2A71152900A5AC1D /* RickAndMortyAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RickAndMortyAPI; sourceTree = "<group>"; };
+		226566E12A72440D00EFFC8D /* InfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRow.swift; sourceTree = "<group>"; };
+		226566E32A72445A00EFFC8D /* EpisodeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeRow.swift; sourceTree = "<group>"; };
 		226A8CDB2A713AA200A6A11D /* tetetete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tetetete.swift; sourceTree = "<group>"; };
 		226A8CDE2A715C6400A6A11D /* CharacterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCardView.swift; sourceTree = "<group>"; };
 		229F73332A71BDA600ED722F /* CharacterRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRowCell.swift; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 		2230AF5E2A707C27005EC8FB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				226566E02A7243FE00EFFC8D /* CharacterDetail */,
 				226A8CDD2A715C5300A6A11D /* CharacterList */,
 				2230AF5F2A707C32005EC8FB /* Image */,
 				2230AF602A707C3F005EC8FB /* UIKit Components */,
@@ -241,6 +246,15 @@
 				225604FC2A71152900A5AC1D /* RickAndMortyAPI */,
 			);
 			name = Packages;
+			sourceTree = "<group>";
+		};
+		226566E02A7243FE00EFFC8D /* CharacterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				226566E12A72440D00EFFC8D /* InfoRow.swift */,
+				226566E32A72445A00EFFC8D /* EpisodeRow.swift */,
+			);
+			path = CharacterDetail;
 			sourceTree = "<group>";
 		};
 		226A8CDD2A715C5300A6A11D /* CharacterList */ = {
@@ -334,6 +348,7 @@
 				2230AF632A71045E005EC8FB /* CharacterDetail.swift in Sources */,
 				2230AF4D2A703C08005EC8FB /* CharacterService.swift in Sources */,
 				2230AF482A7039C6005EC8FB /* NetworkManager.swift in Sources */,
+				226566E22A72440D00EFFC8D /* InfoRow.swift in Sources */,
 				2230AF562A707577005EC8FB /* Color+Ext.swift in Sources */,
 				2230AF522A706597005EC8FB /* CharactersImage.swift in Sources */,
 				226A8CDC2A713AA200A6A11D /* tetetete.swift in Sources */,
@@ -342,6 +357,7 @@
 				2230AF582A707815005EC8FB /* CharactersListViewModel.swift in Sources */,
 				2230AF4A2A703B94005EC8FB /* NetworkError.swift in Sources */,
 				2230AF502A70494E005EC8FB /* Character.swift in Sources */,
+				226566E42A72445A00EFFC8D /* EpisodeRow.swift in Sources */,
 				2230AF542A7074E3005EC8FB /* LoadingView.swift in Sources */,
 				2230AF662A7105AD005EC8FB /* CharacterDetailViewModel.swift in Sources */,
 				222422362A7117E9002E7FF7 /* CharacterDetailModel.swift in Sources */,
